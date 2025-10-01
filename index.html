@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KotakMerah</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="./script/bluds.js"></script>
+</head>
+
+<body>
+    <!-- nav -->
+    <div id="navbar" class="fixed top-0 left-0 right-0 z-40 transition-all duration-500 ease-in-out bg-[#FAFAFA]">
+
+        <div id="navbar-container" class="transition-all duration-500 ease-in-out px-6 py-3">
+            <div class="flex items-center justify-between gap-8">
+                <!-- Logo -->
+                <a href="/index.html" class="flex items-center space-x-3 z-50">
+                    <img id="main-logo" src="/assets/images/etrisad_long.png" alt="Etrisad Logo"
+                        class="h-auto w-20 transition-all duration-500">
+                    <img id="scroll-logo" src="/assets/images/etrisad_icon.png" alt="Etrisad Logo"
+                        class="h-8 w-auto opacity-0 duration-500">
+                </a>
+
+                <!-- Tablet Only: 4 Top Menu Icons Without Text -->
+                <nav id="tablet-nav"
+                    class="hidden md:flex lg:hidden items-center space-x-4 transition-opacity transition-transform duration-500">
+                    <a href="/index.html"
+                        class="nav-link text-gray-300 hover:text-white transition-colors duration-300 flex items-center justify-center text-xl p-2 rounded-lg transition-all duration-500">
+                        <span class="material-symbols-outlined">home</span>
+                    </a>
+                    <a href="/contents.html"
+                        class="nav-link text-gray-300 hover:text-white transition-colors duration-300 flex items-center justify-center text-xl p-2 rounded-lg transition-all duration-500">
+                        <span class="material-symbols-outlined">article</span>
+                    </a>
+                    <a href="/divisions.html"
+                        class="nav-link text-gray-300 hover:text-white transition-colors duration-300 flex items-center justify-center text-xl p-2 rounded-lg transition-all duration-500">
+                        <span class="material-symbols-outlined">hub</span>
+                    </a>
+                    <a href="/shutdown.html"
+                        class="nav-link text-gray-300 hover:text-white transition-colors duration-300 flex items-center justify-center text-xl p-2 rounded-lg transition-all duration-500">
+                        <span class="material-symbols-outlined">play_circle</span>
+                    </a>
+                </nav>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center space-x-6 transition-opacity transition-transform duration-500">
+                    <a href="/index.html"
+                        class="nav-link text-gray-300 hover:text-white transition-colors duration-300 font-medium flex items-center gap-2 text-sm whitespace-nowrap">
+                        <span class="material-symbols-outlined">home</span>Home
+                    </a>
+                    <a href="/contents.html"
+                        class="nav-link text-gray-300 hover:text-white transition-colors duration-300 font-medium flex items-center gap-2 text-sm">
+                        <span class="material-symbols-outlined">article</span>Konten
+                    </a>
+                    <a href="/divisions.html"
+                        class="nav-link text-gray-300 hover:text-white transition-colors duration-300 font-medium flex items-center gap-2 text-sm">
+                        <span class="material-symbols-outlined">hub</span>Divisi
+                    </a>
+                    <a href="/shutdown.html"
+                        class="nav-link text-gray-300 hover:text-white transition-colors duration-300 font-medium flex items-center gap-2 text-sm">
+                        <span class="material-symbols-outlined">play_circle</span>Shutdown
+                    </a>
+                    <!-- Dropdown Menu -->
+                    <div class="relative group">
+                        <button id="dropdown-btn"
+                            class="text-gray-300 hover:text-white transition-colors duration-300 font-medium flex items-center gap-2 text-sm">
+                            <span class="material-symbols-outlined">more_horiz</span>
+                            Lainnya
+                            <span
+                                class="material-symbols-outlined text-sm transition-transform duration-200 group-hover:rotate-180">expand_more</span>
+                        </button>
+                        <div
+                            class="absolute right-0 top-full mt-2 w-48 py-2 bg-brand-gray/95 backdrop-blur-xl rounded-xl shadow-xl border border-white/10 invisible opacity-0 translate-y-2 transition-all duration-300 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0">
+                            <a href="/era.html"
+                                class="flex items-center gap-3 px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/5 transition-colors">
+                                <span class="material-symbols-outlined">history_toggle_off</span>Era
+                            </a>
+                            <a href="/time-capsule.html"
+                                class="flex items-center gap-3 px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/5 transition-colors">
+                                <span class="material-symbols-outlined">timer</span>Time Capsule
+                            </a>
+                            <a href="/lainnya.html"
+                                class="flex items-center gap-3 px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/5 transition-colors">
+                                <span class="material-symbols-outlined">more_horiz</span>Lainnya
+                            </a>
+                            <a href="/about.html"
+                                class="flex items-center gap-3 px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/5 transition-colors">
+                                <span class="material-symbols-outlined">info</span>About
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn"
+                    class="lg:hidden p-2 rounded-lg z-50 transition-opacity transition-transform duration-500">
+                    <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="h-[1013vh]">
+
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+<script>
+    const navbar = document.querySelector('#navbar');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 0) {
+            navbar.classList.add('hidden', 'rounded-pill');
+        } else {
+            navbar.classList.remove('sticky-top', 'rounded-pill');
+        }
+    });
+</script>
+
+</html>

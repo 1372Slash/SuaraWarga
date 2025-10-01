@@ -1,0 +1,346 @@
+      <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Kotak Merah</title>
+          <script src="https://cdn.tailwindcss.com"></script>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+          <style>
+            .font-instrument-serif {
+              font-family: 'Instrument Serif', serif;
+            }
+          </style>
+      </head>
+      <body class="bg-gray-800">
+
+        <!-- Header -->
+        <div class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-full max-w-4xl px-4 sm:px-6 lg:px-8">
+            <header class="bg-white/80 backdrop-blur-sm shadow-lg rounded-full">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex items-center justify-between h-16">
+                        <!-- Logo -->
+                        <div class="flex-shrink-0">
+                            <a href="#" class="flex items-center space-x-2">
+                                <div class="w-8 h-8 bg-red-600 rounded-md flex items-center justify-center">
+                                    <i class="fa-solid fa-box text-white"></i>
+                                </div>
+                                <span class="font-bold text-xl text-gray-800 hidden sm:inline">Kotak Merah</span>
+                            </a>
+                        </div>
+        
+                        <!-- Desktop Navigation -->
+                        <nav class="hidden md:flex items-center space-x-1">
+                            <a href="#" class="px-3 py-2 text-gray-700 hover:text-red-600 font-medium rounded-lg text-sm">Beranda</a>
+                            <a href="#tentang" class="px-3 py-2 text-gray-700 hover:text-red-600 font-medium rounded-lg text-sm">Tentang</a>
+                            <a href="#fitur" class="px-3 py-2 text-gray-700 hover:text-red-600 font-medium rounded-lg text-sm">Fitur</a>
+                            <a href="#alur" class="px-3 py-2 text-gray-700 hover:text-red-600 font-medium rounded-lg text-sm">Cara Melapor</a>
+                            <a href="#kontak" class="px-3 py-2 text-gray-700 hover:text-red-600 font-medium rounded-lg text-sm">Kontak</a>
+                        </nav>
+        
+                        <!-- Login/Daftar & Mobile Menu Button -->
+                        <div class="flex items-center space-x-2">
+                            <a href="#" class="hidden sm:inline-block rounded-full bg-red-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600 transition-colors">Login/Daftar</a>
+                            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100">
+                                <i class="fa-solid fa-bars text-xl"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-2 bg-white/95 backdrop-blur-sm shadow-lg rounded-2xl overflow-hidden">
+                <nav class="pt-2 pb-4 space-y-1">
+                    <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600 font-medium"><i class="fa-solid fa-house w-6"></i> Beranda</a>
+                    <a href="#tentang" class="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600 font-medium"><i class="fa-solid fa-circle-info w-6"></i> Tentang</a>
+                    <a href="#fitur" class="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600 font-medium"><i class="fa-solid fa-star w-6"></i> Fitur</a>
+                    <a href="#alur" class="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600 font-medium"><i class="fa-solid fa-arrow-right-to-bracket w-6"></i> Cara Melapor</a>
+                    <a href="#kontak" class="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600 font-medium"><i class="fa-solid fa-envelope w-6"></i> Kontak</a>
+                    <div class="px-2 pt-2">
+                      <a href="#" class="block w-full text-center rounded-full bg-red-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-700 sm:hidden">Login/Daftar</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        
+        <div id="page-container" class="relative z-10 bg-gray-50 rounded-b-2xl shadow-2xl mb-32 sm:mb-48">
+            <main class="pt-24">
+                <!-- Hero Section -->
+                <section class="relative isolate px-6 pt-20 lg:px-8">
+                    <div class="mx-auto max-w-3xl py-32 sm:py-40">
+                        <div class="text-center">
+                            <h1 class="font-instrument-serif text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Suara Anda, Perubahan Kita Bersama.</h1>
+                            <p class="mt-6 text-lg leading-8 text-gray-600">Kotak Merah hadir sebagai wadah masyarakat untuk menyampaikan laporan terkait kinerja pemerintah dengan mudah, cepat, dan transparan.</p>
+                            <div class="mt-10 flex items-center justify-center gap-x-6">
+                                <a href="#" class="rounded-md bg-red-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">Buat Laporan Sekarang</a>
+                                <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Lihat Laporan Terkini <span aria-hidden="true">→</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="space-y-24 sm:space-y-32">
+                  <!-- Tentang Section -->
+                  <section id="tentang" class="mx-auto max-w-7xl px-6 lg:px-8">
+                    <div class="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-start">
+                        <div>
+                            <h2 class="text-base font-semibold leading-7 text-red-600">TENTANG KOTAK MERAH</h2>
+                            <p class="font-instrument-serif mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Layanan Aspirasi & Pengaduan Online Rakyat</p>
+                            <p class="mt-6 text-lg leading-8 text-gray-600">Sampaikan laporan Anda langsung kepada instansi pemerintah berwenang dan selesaikan masalah Anda dengan lebih mudah dan transparan.</p>
+                            <dl class="mt-10 space-y-8 text-base leading-7 text-gray-600">
+                                <div class="relative pl-9">
+                                    <dt class="inline font-semibold text-gray-900">
+                                        <i class="absolute left-1 top-1 h-5 w-5 text-red-600 fa-solid fa-eye"></i>
+                                        Transparansi.
+                                    </dt>
+                                    <dd class="inline">Setiap laporan dapat dipantau perkembangannya, memastikan akuntabilitas.</dd>
+                                </div>
+                                <div class="relative pl-9">
+                                    <dt class="inline font-semibold text-gray-900">
+                                        <i class="absolute left-1 top-1 h-5 w-5 text-red-600 fa-solid fa-link"></i>
+                                        Terintegrasi.
+                                    </dt>
+                                    <dd class="inline">Terhubung dengan berbagai instansi pemerintah untuk penanganan yang efisien.</dd>
+                                </div>
+                                <div class="relative pl-9">
+                                    <dt class="inline font-semibold text-gray-900">
+                                        <i class="absolute left-1 top-1 h-5 w-5 text-red-600 fa-solid fa-shield-halved"></i>
+                                        Aman.
+                                    </dt>
+                                    <dd class="inline">Identitas pelapor dijamin kerahasiaannya untuk setiap laporan yang dibuat.</dd>
+                                </div>
+                            </dl>
+                        </div>
+                        <div class="mt-12 sm:mt-16 lg:mt-0">
+                          <div class="-m-12 p-12 lg:overflow-hidden">
+                            <img class="w-full rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]" src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                          </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                  <!-- Fitur Section -->
+                  <section id="fitur" class="mx-auto max-w-7xl px-6 lg:px-8">
+                      <div class="mx-auto max-w-2xl lg:text-center">
+                        <h2 class="text-base font-semibold leading-7 text-red-600">FITUR UTAMA</h2>
+                        <p class="font-instrument-serif mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Semua yang Anda Butuhkan</p>
+                      </div>
+                      <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+                          <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+                              <div class="relative pl-16">
+                                  <dt class="font-instrument-serif text-base font-semibold leading-7 text-gray-900">
+                                      <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-red-600 text-white"><i class="fa-solid fa-road"></i></div>
+                                      Laporan Fasilitas
+                                  </dt>
+                                  <dd class="mt-2 text-base leading-7 text-gray-600">Laporkan kerusakan fasilitas umum seperti jalan rusak, lampu mati, dan lainnya.</dd>
+                              </div>
+                              <div class="relative pl-16">
+                                  <dt class="font-instrument-serif text-base font-semibold leading-7 text-gray-900">
+                                      <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-red-600 text-white"><i class="fa-solid fa-user-tie"></i></div>
+                                      Pelaporan Kinerja Aparat
+                                  </dt>
+                                  <dd class="mt-2 text-base leading-7 text-gray-600">Laporkan kedisiplinan, transparansi, dan pelayanan aparat.</dd>
+                              </div>
+                              <div class="relative pl-16">
+                                  <dt class="font-instrument-serif text-base font-semibold leading-7 text-gray-900">
+                                    <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-red-600 text-white"><i class="fa-solid fa-hospital"></i></div>
+                                      Pelaporan Pelayanan Publik
+                                  </dt>
+                                  <dd class="mt-2 text-base leading-7 text-gray-600">Laporkan masalah pelayanan di kesehatan, pendidikan, dan administrasi.</dd>
+                              </div>
+                              <div class="relative pl-16">
+                                  <dt class="font-instrument-serif text-base font-semibold leading-7 text-gray-900">
+                                    <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-red-600 text-white"><i class="fa-solid fa-chart-line"></i></div>
+                                      Pantau Status Laporan
+                                  </dt>
+                                  <dd class="mt-2 text-base leading-7 text-gray-600">Cek progres laporan yang telah Anda kirimkan secara real-time.</dd>
+                              </div>
+                          </dl>
+                      </div>
+                  </section>
+
+                  <!-- Alur Section -->
+                  <section id="alur" class="mx-auto max-w-7xl px-6 lg:px-8">
+                    <div class="mx-auto max-w-3xl lg:text-center">
+                        <h2 class="text-base font-semibold leading-7 text-red-600">ALUR PELAPORAN</h2>
+                        <p class="font-instrument-serif mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Langkah Mudah Melaporkan Masalah</p>
+                    </div>
+                    <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+                        <div class="grid grid-cols-1 gap-y-10 text-center sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-8">
+                            <div class="flex flex-col items-center">
+                                <div class="flex h-12 w-12 items-center justify-center rounded-full bg-red-600 text-white font-bold text-lg">1</div>
+                                <p class="font-instrument-serif mt-4 font-semibold text-gray-900">Pilih Kategori</p>
+                                <p class="mt-1 text-sm text-gray-600">Pilih jenis laporan yang sesuai.</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <div class="flex h-12 w-12 items-center justify-center rounded-full bg-red-600 text-white font-bold text-lg">2</div>
+                                <p class="font-instrument-serif mt-4 font-semibold text-gray-900">Isi Detail Laporan</p>
+                                <p class="mt-1 text-sm text-gray-600">Jelaskan detail masalah dan upload bukti.</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <div class="flex h-12 w-12 items-center justify-center rounded-full bg-red-600 text-white font-bold text-lg">3</div>
+                                <p class="font-instrument-serif mt-4 font-semibold text-gray-900">Kirim Laporan</p>
+                                <p class="mt-1 text-sm text-gray-600">Laporan Anda akan terkirim ke instansi terkait.</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <div class="flex h-12 w-12 items-center justify-center rounded-full bg-red-600 text-white font-bold text-lg">4</div>
+                                <p class="font-instrument-serif mt-4 font-semibold text-gray-900">Pantau Tindak Lanjut</p>
+                                <p class="mt-1 text-sm text-gray-600">Lihat progres penanganan laporan Anda.</p>
+                            </div>
+                        </div>
+                    </div>
+                  </section>
+
+                  <!-- Statistik Section -->
+                  <section id="statistik" class="mx-auto max-w-7xl px-6 lg:px-8">
+                    <div class="mx-auto max-w-3xl lg:max-w-none">
+                      <div class="text-center">
+                        <h2 class="font-instrument-serif text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Transparansi & Akuntabilitas</h2>
+                        <p class="mt-4 text-lg leading-8 text-gray-600">Lacak kemajuan laporan dan lihat dampak nyata dari suara Anda.</p>
+                      </div>
+                      <dl class="mt-16 grid grid-cols-1 gap-4 overflow-hidden rounded-2xl text-center sm:grid-cols-3">
+                        <div class="flex flex-col bg-white p-8 border rounded-xl">
+                          <dt class="text-sm font-semibold leading-6 text-gray-600">Laporan Masuk</dt>
+                          <dd class="order-first text-3xl font-semibold tracking-tight text-red-600">12,345</dd>
+                        </div>
+                        <div class="flex flex-col bg-white p-8 border rounded-xl">
+                          <dt class="text-sm font-semibold leading-6 text-gray-600">Laporan Diproses</dt>
+                          <dd class="order-first text-3xl font-semibold tracking-tight text-yellow-500">10,987</dd>
+                        </div>
+                        <div class="flex flex-col bg-white p-8 border rounded-xl">
+                          <dt class="text-sm font-semibold leading-6 text-gray-600">Laporan Selesai</dt>
+                          <dd class="order-first text-3xl font-semibold tracking-tight text-green-500">9,876</dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </section>
+
+                  <!-- Testimoni Section -->
+                  <section id="testimoni" class="mx-auto max-w-7xl px-6 lg:px-8">
+                      <div class="mx-auto max-w-xl text-center">
+                          <h2 class="text-lg font-semibold leading-8 tracking-tight text-red-600">TESTIMONI</h2>
+                          <p class="font-instrument-serif mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Apa Kata Mereka?</p>
+                      </div>
+                      <div class="mx-auto mt-16 flow-root max-w-2xl sm:mt-20 lg:mx-0 lg:max-w-none">
+                          <div class="-mt-8 sm:-mx-4 sm:columns-2 sm:text-[0] lg:columns-3">
+                              <div class="pt-8 sm:inline-block sm:w-full sm:px-4">
+                                  <figure class="rounded-2xl bg-white p-8 text-sm leading-6 border">
+                                      <blockquote class="text-gray-900">
+                                          <p>“Sangat membantu! Laporan saya tentang jalan rusak ditanggapi dengan cepat. Terima kasih Kotak Merah!”</p>
+                                      </blockquote>
+                                      <figcaption class="mt-6 flex items-center gap-x-4">
+                                          <img class="h-10 w-10 rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                                          <div>
+                                              <div class="font-semibold text-gray-900">Ani</div>
+                                              <div class="text-gray-600">Warga</div>
+                                          </div>
+                                      </figcaption>
+                                  </figure>
+                              </div>
+                              <div class="pt-8 sm:inline-block sm:w-full sm:px-4">
+                                <figure class="rounded-2xl bg-white p-8 text-sm leading-6 border">
+                                    <blockquote class="text-gray-900">
+                                        <p>“Awalnya ragu, tapi ternyata laporan saya ditindaklanjuti. Saya jadi lebih percaya dengan pemerintah.”</p>
+                                    </blockquote>
+                                    <figcaption class="mt-6 flex items-center gap-x-4">
+                                        <img class="h-10 w-10 rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                                        <div>
+                                            <div class="font-semibold text-gray-900">Budi</div>
+                                            <div class="text-gray-600">Warga</div>
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                              <div class="pt-8 sm:inline-block sm:w-full sm:px-4">
+                                  <figure class="rounded-2xl bg-white p-8 text-sm leading-6 border">
+                                      <blockquote class="text-gray-900">
+                                          <p>“Pelayanan publik menjadi lebih baik setelah saya melaporkan masalah di kelurahan. Sistem ini benar-benar bekerja.”</p>
+                                      </blockquote>
+                                      <figcaption class="mt-6 flex items-center gap-x-4">
+                                          <img class="h-10 w-10 rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                                          <div>
+                                              <div class="font-semibold text-gray-900">Cici</div>
+                                              <div class="text-gray-600">Warga</div>
+                                          </div>
+                                      </figcaption>
+                                  </figure>
+                              </div>
+                          </div>
+                      </div>
+                  </section>
+
+                  <!-- CTA Section -->
+                  <section class="mx-auto max-w-7xl px-6 lg:px-8">
+                    <div class="relative isolate overflow-hidden bg-red-600 px-6 py-24 text-center shadow-2xl rounded-2xl sm:px-16">
+                      <h2 class="font-instrument-serif mx-auto max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl">Jangan biarkan masalah di sekitar Anda terabaikan.</h2>
+                      <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-red-100">Bergabunglah dengan ribuan warga lainnya yang telah membuat perubahan. Laporkan sekarang dan jadilah bagian dari solusi.</p>
+                      <div class="mt-10 flex items-center justify-center gap-x-6">
+                        <a href="#" class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-red-600 shadow-sm hover:bg-red-50">Buat Laporan Sekarang</a>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+            </main>
+        </div>
+
+        <!-- Footer -->
+        <footer id="kontak" class="sticky bottom-0 z-0">
+            <div class="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
+                <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
+                    <div class="space-y-4">
+                        <a href="#" class="flex items-center space-x-2 justify-center md:justify-start">
+                            <div class="w-8 h-8 bg-red-600 rounded-md flex items-center justify-center">
+                                <i class="fa-solid fa-box text-white"></i>
+                            </div>
+                            <span class="font-instrument-serif font-bold text-xl text-white">Kotak Merah</span>
+                        </a>
+                        <p class="text-sm text-gray-400">Suara Anda, Perubahan Kita Bersama. Platform untuk melaporkan masalah dan memantau kinerja pemerintah secara transparan.</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold leading-6 text-white">Navigasi</h3>
+                            <ul class="mt-6 space-y-4">
+                                <li><a href="#tentang" class="text-sm leading-6 text-gray-400 hover:text-white">Tentang</a></li>
+                                <li><a href="#fitur" class="text-sm leading-6 text-gray-400 hover:text-white">Fitur</a></li>
+                                <li><a href="#alur" class="text-sm leading-6 text-gray-400 hover:text-white">Cara Melapor</a></li>
+                                <li><a href="#testimoni" class="text-sm leading-6 text-gray-400 hover:text-white">Testimoni</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-semibold leading-6 text-white">Legal</h3>
+                            <ul class="mt-6 space-y-4">
+                                <li><a href="#" class="text-sm leading-6 text-gray-400 hover:text-white">FAQ</a></li>
+                                <li><a href="#" class="text-sm leading-6 text-gray-400 hover:text-white">Kebijakan Privasi</a></li>
+                                <li><a href="#" class="text-sm leading-6 text-gray-400 hover:text-white">Syarat & Ketentuan</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <h3 class="text-sm font-semibold leading-6 text-white">Ikuti Kami</h3>
+                        <div class="flex justify-center md:justify-start space-x-6">
+                            <a href="#" class="text-gray-400 hover:text-white"><i class="fa-brands fa-facebook fa-lg"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white"><i class="fa-brands fa-twitter fa-lg"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white"><i class="fa-brands fa-youtube fa-lg"></i></a>
+                        </div>
+                    </div>
+                </div>
+              <p class="mt-10 text-center text-xs leading-5 text-gray-500">&copy; 2024 Kotak Merah. Semua hak dilindungi.</p>
+            </div>
+        </footer>
+
+        <script>
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        </script>
+
+      </body>
+      </html>
