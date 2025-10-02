@@ -65,7 +65,7 @@
             </div>
         </div>
         
-        <div id="page-container" class="relative z-10 bg-gray-50 rounded-b-2xl shadow-2xl mb-32 sm:mb-48">
+        <div id="page-container" class="relative z-10 bg-gray-50 rounded-b-2xl shadow-2xl mb-32 sm:mb-48 w-full">
             <main class="pt-24">
                 <!-- Hero Section -->
                 <section class="relative isolate px-6 pt-20 lg:px-8">
@@ -83,44 +83,53 @@
 
                 <div class="space-y-24 sm:space-y-32">
                   <!-- Tentang Section -->
-                  <section id="tentang" class="mx-auto max-w-7xl px-6 lg:px-8">
-                    <div class="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-start">
-                        <div>
-                            <h2 class="text-base font-semibold leading-7 text-red-600">TENTANG KOTAK MERAH</h2>
-                            <p class="font-instrument-serif mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Layanan Aspirasi & Pengaduan Online Rakyat</p>
-                            <p class="mt-6 text-lg leading-8 text-gray-600">Sampaikan laporan Anda langsung kepada instansi pemerintah berwenang dan selesaikan masalah Anda dengan lebih mudah dan transparan.</p>
-                            <dl class="mt-10 space-y-8 text-base leading-7 text-gray-600">
-                                <div class="relative pl-9">
-                                    <dt class="inline font-semibold text-gray-900">
-                                        <i class="absolute left-1 top-1 h-5 w-5 text-red-600 fa-solid fa-eye"></i>
-                                        Transparansi.
-                                    </dt>
-                                    <dd class="inline">Setiap laporan dapat dipantau perkembangannya, memastikan akuntabilitas.</dd>
-                                </div>
-                                <div class="relative pl-9">
-                                    <dt class="inline font-semibold text-gray-900">
-                                        <i class="absolute left-1 top-1 h-5 w-5 text-red-600 fa-solid fa-link"></i>
-                                        Terintegrasi.
-                                    </dt>
-                                    <dd class="inline">Terhubung dengan berbagai instansi pemerintah untuk penanganan yang efisien.</dd>
-                                </div>
-                                <div class="relative pl-9">
-                                    <dt class="inline font-semibold text-gray-900">
-                                        <i class="absolute left-1 top-1 h-5 w-5 text-red-600 fa-solid fa-shield-halved"></i>
-                                        Aman.
-                                    </dt>
-                                    <dd class="inline">Identitas pelapor dijamin kerahasiaannya untuk setiap laporan yang dibuat.</dd>
-                                </div>
-                            </dl>
-                        </div>
-                        <div class="mt-12 sm:mt-16 lg:mt-0">
-                          <div class="-m-12 p-12 lg:overflow-hidden">
-                            <img class="w-full rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]" src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                  <section id="tentang" class="relative py-20 bg-gray-100">
+                    <div
+                      class="absolute inset-0 bg-cover bg-center"
+                      style="background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"
+                    ></div>
+                    <div class="absolute inset-0 bg-gray-800 opacity-75"></div>
+                    <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
+                      <div class="text-center">
+                        <h2 class="text-base font-semibold leading-7 text-red-400">TENTANG KOTAK MERAH</h2>
+                        <p class="font-instrument-serif mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                          Layanan Aspirasi & Pengaduan Online Rakyat
+                        </p>
+                        <p class="mt-6 text-lg leading-8 text-gray-300">
+                          Sampaikan laporan Anda langsung kepada instansi pemerintah berwenang dan selesaikan masalah Anda dengan lebih mudah dan transparan.
+                        </p>
+                      </div>
+                      <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8">
+                        <div class="flex gap-x-4 rounded-xl bg-white/5 p-6 ring-1 ring-inset ring-white/10 transform hover:scale-105 transition-transform duration-300">
+                          <i class="fa-solid fa-eye h-7 w-5 flex-none text-red-400"></i>
+                          <div class="text-base leading-7">
+                            <h3 class="font-semibold text-white">Transparansi</h3>
+                            <p class="mt-2 text-gray-300">
+                              Setiap laporan dapat dipantau perkembangannya, memastikan akuntabilitas.
+                            </p>
                           </div>
                         </div>
+                        <div class="flex gap-x-4 rounded-xl bg-white/5 p-6 ring-1 ring-inset ring-white/10 transform hover:scale-105 transition-transform duration-300">
+                          <i class="fa-solid fa-link h-7 w-5 flex-none text-red-400"></i>
+                          <div class="text-base leading-7">
+                            <h3 class="font-semibold text-white">Terintegrasi</h3>
+                            <p class="mt-2 text-gray-300">
+                              Terhubung dengan berbagai instansi pemerintah untuk penanganan yang efisien.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="flex gap-x-4 rounded-xl bg-white/5 p-6 ring-1 ring-inset ring-white/10 transform hover:scale-105 transition-transform duration-300">
+                          <i class="fa-solid fa-shield-halved h-7 w-5 flex-none text-red-400"></i>
+                          <div class="text-base leading-7">
+                            <h3 class="font-semibold text-white">Aman</h3>
+                            <p class="mt-2 text-gray-300">
+                              Identitas pelapor dijamin kerahasiaannya untuk setiap laporan yang dibuat.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                </section>
-
+                  </section>
 
                   <!-- Fitur Section -->
                   <section id="fitur" class="mx-auto max-w-7xl px-6 lg:px-8">
